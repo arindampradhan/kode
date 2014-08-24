@@ -1,0 +1,3 @@
+##Just a different approach
+
+Well I am trying to see how reading basic books and applying them helps them in my competative programming...
