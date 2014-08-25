@@ -1,5 +1,9 @@
 #include <stdio.h>
- 
+#include <iostream>
+using namespace std;
+
+
+#define x getchar_unlocked()
 // A utility function to print an array
 void printArray (int arr[], int n);
  

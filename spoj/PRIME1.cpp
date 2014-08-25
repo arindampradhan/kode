@@ -389,6 +389,7 @@
     else
     i=0;
     }
+    
     else if(m+(p[j]-x)==p[j])
     {
     i=2*p[j]-x;
@@ -401,6 +402,7 @@
     {
     bool2[i]=1;
     }
+    
     j++;
 
     // c used here
