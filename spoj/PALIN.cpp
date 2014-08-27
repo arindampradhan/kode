@@ -123,16 +123,16 @@ void printArray(int arr[], int n)
 }
  
 // Driver Program to test above function
-int main()
-{
-    int num[] = {9, 4, 1, 8, 7, 9, 7, 8, 3, 2, 2};
+// int main()
+// {
+//     int num[] = {9, 4, 1, 8, 7, 9, 7, 8, 3, 2, 2};
  
-    int n = sizeof (num)/ sizeof(num[0]);
+//     int n = sizeof (num)/ sizeof(num[0]);
  
-    generateNextPalindrome( num, n );
+//     generateNextPalindrome( num, n );
  
-    return 0;
-}
+//     return 0;
+// }
 
 
 int main(int argc, char const *argv[])

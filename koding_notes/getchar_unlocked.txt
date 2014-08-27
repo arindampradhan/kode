@@ -55,7 +55,13 @@ So when a thread enter in such a critical section, it acquires a lock, so that a
 
 
 
+//best use
 
+for ( i = 0; ch !='\n'; i++)
+	{
+		A[i] = ch ,ch=x;
+	}
+	A[i]='\0';
 
 
 //basic example

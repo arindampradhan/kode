@@ -1,0 +1,16 @@
+
+char *revr(char buf[],int count){
+	char f1[10]="";
+	int j=0;
+	for(int i=count; i >= 0;i--){
+	if(buf[i] != '0'){
+		f1[j] = buf[i];
+		j++;
+		}
+	//cout << f1 <<endl;
+	}
+	length = j;
+	//cout << f1[0];
+	return f1;
+	}
+	

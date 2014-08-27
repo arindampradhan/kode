@@ -34,9 +34,9 @@ char *func(){
 
 
 
-
+	
 //some pure fucking examples
-
+	
 
 #include <stdio.h>      /* printf */
 #include <stdlib.h>     /* strtol */

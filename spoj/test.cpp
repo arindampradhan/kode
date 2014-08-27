@@ -1,15 +1,19 @@
+#include <stdio.h>      /* printf */
+#include <stdlib.h>     /* strtol */
 #include <iostream>
-#include <vector>
+#include <sstream>
+char *fillarr( char arr[] ) { // arr "decays" to type int *
+    return arr;
+}
+
 using namespace std;
-main(){
-	vector <int> num;
-	int temp;
-	while(cin >> temp){
-	if(temp==42)break;
-	num.push_back(temp);
-	}
-	for(int i=0; i < num.size();i++){
-		cout << num[i]<< endl;
-	}
-	return 0; 
+
+
+int main()
+{
+  char a[10] = {'0','0','0','0','0','0','0','0','0','',''};
+
+for(int i=0;i < 10;i++)cout << a[i];
+  
+  //cout << a[0] << a[1] << a[5]<< endl;
 }
