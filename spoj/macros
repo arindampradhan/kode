@@ -1,0 +1,23 @@
+typedef long long LL;
+typedef long double LD;
+typedef vector<int> VI;
+typedef vector<string> VS;
+typedef pair<int,int> PII;
+
+There are two common versions of FOR macros:
+#define FOR(k,a,b) for(typeof(a) k=(a); k <= (b); ++k)
+#define REP(k,a) for(int k=0; k < (a); ++k)
+
+
+or:
+#define FOR(k,a,b) for(typeof(a) k=(a); k < (b); k++)
+
+
+Size macro:
+#define SZ(x) ((int)((x).size()))
+
+
+Other popular abbreviations:
+#define ALL(c) (c).begin(), (c).end()  
+#define PB push_back 
+#define MP make_pair 

@@ -1,3 +1,4 @@
+#define CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <stdio.h>
 #include <string>
@@ -5,27 +6,32 @@
 char *revr(char buf[],int count);
 using namespace std;
 int length;
-main(){
-	int t;
+int main(){
+	int  t;
 	scanf("%d",&t);
-	//input1
+	fflush(stdin);
 	char buf [10] = " ";
 	char dig;
+	fflush(stdin);
 	dig = x;
+	
 	int i;
 	for(i=0; dig != ' ';i++){
 		buf[i] = dig;
 		dig=x;
+		cout << buf[i];
 		}
+		
 	//int count1 = i;	
 	buf[i]='\0';
-	
+	fflush(stdin);
 	//input2
 	char luf[10] = " ";
 	char big = x;
 	for(i=0; big != '\n';i++){
 		luf[i] = big;
 		big=x;
+		cout <<luf[i];
 		}
 	//int count2 = i;	
 	luf[i]='\0';
@@ -58,7 +64,7 @@ main(){
 		for(int i=flag;i < count;i++)cout << ans[i];	  
 	
 	
-	
+	return 0;
 	}
 	
 	

@@ -1,0 +1,102 @@
+1. What is getchar_unlocked( )?
+
+The getchar_unlocked() function gets a character from stdin. It is equivalent to getc_unlocked(stdin). It is not thread safe.
+The getchar_unlocked() function returns the next character from stdin. If stdin is at the end of the file, the end-of-file indicator for stdin is set and getchar_unlocked() returns EOF. If a read error occurs, the error indicator forstdin is set and getchar_unlocked() returns EOF.
+
+
+2. How to use getchar_unlocked( )?
+
+examples
+
+3.When to use getchar_unlocked( )
+
+We can use getchar_unlocked for problem like: Problem H - Save the Trees
+It is mentioned here Dataset is huge, use faster IO methods.
+Use it when thread safety is not required but speed is.
+
+
+4. Advantages?
+
+Speed.
+
+getchar_unlocked > getchar
+
+
+because there is no input stream lock check in getchar_unlocked which makes it unsafe.
+
+getchar > scanf
+
+
+because getchar reads a single character of input which is char type whereas scanf can read most of the primitive types available in c.
+and hence
+
+getchar_unlocked > getchar > scanf
+
+
+
+
+5. Disadvantages?
+
+Unless speed factor is too much necessary, try to avoid getchar_unlocked.
+Cannot be used where thread safety is important/required.
+It is POSIX standard and hence Windows compiler does not support it.
+
+
+6. How is it different from getchar?
+
+getchar_unlocked is not thread safe. Hence all the overheads of mutual exclusion is avoided. When we have a single thread it doesn't matter for us.
+So getchar_unlocked is a thread unsafe version of getchar( ), and as it doesn't check for any locks it is faster then getchar.
+
+7. Multithread lock
+
+When there is some shared space, like buffer in our case, to avoid race conditions, we use locking mechanism, to lead to consistency. So that even if more than one thread are using/manipulating the shared space, we will get a consistent state.
+So when a thread enter in such a critical section, it acquires a lock, so that at a given moment only single thread is in the critical section.
+
+
+
+
+
+
+
+//basic example
+
+
+#include <stdio.h>
+
+int main( )
+
+{
+
+    char c = getchar_unlocked( );
+
+    printf( "%c" , c );
+
+    return 0;
+
+}
+
+
+
+
+
+
+//this is an example
+#include "iostream"
+#include "cmath"
+#include "cstdio"
+#define x getchar_unlocked()
+#define y putchar_unlocked
+
+
+using namespace std;
+int main( )
+{
+   	char A[1000010];
+	char	ch=x;
+		for(int i=0;ch!='\n';i++)
+			A[i]=ch,ch=x;
+			
+		for(int i=0;i < 2000;i++)	cout << A[i];
+	return 0;
+}
+
